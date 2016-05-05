@@ -1,0 +1,11 @@
+html {
+  font-size: 14px;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1024px;
+  margin: auto;
+}
