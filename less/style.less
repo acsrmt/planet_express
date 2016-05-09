@@ -27,6 +27,7 @@ body {
   font-family: @font-family;
   font-size: @font-size;
   line-height: @line-height;
+  color: @black;
 }
 h1 {
   font-size: @font-size--h1;
@@ -40,6 +41,7 @@ h2 {
 }
 h3 {
   font-size: @font-size--h3;
+  text-transform: uppercase;
 }
 .page-header {
   display: flex;
@@ -76,13 +78,18 @@ h3 {
 }
 .header-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   width: 100%;
   outline: 1px solid green;
   padding-top: 180px;
   padding-bottom: 90px;
+
+  .button-wrapper {
+    width: 48%;
+    outline: 1px solid red;
+  }
   h2 {
     text-transform: uppercase;
     //flex-grow: 1;
@@ -90,8 +97,17 @@ h3 {
     padding-left: 26%;
     outline: 1px solid blue;
   }
+
+  h2:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 10px;
+    margin-top: 35px;
+    background-color: @black;
+  }
   p {
-    width: 60%;
+    width: 58%;
     //padding: 19%;
     outline: 1px solid purple;
   }
@@ -103,18 +119,53 @@ h3 {
   &__item {
     display: flex;
     flex-wrap: nowrap;
-    //  width: 100%;
+
     .post {
+      // display: flex;
+      // flex-wrap: wrap;
+      // align-items: flex-start;
       outline: 1px solid red;
       width: 50%;
-      height: 333px;
+      min-height: 333px;
       flex-shrink: 4;
       h3 {
-        text-align: right;
+        width: 100%;
+        height: @line-height;
+        text-align: left;
+        margin-top: 85px;
+        padding-left: 7%;
+        outline: 1px solid green;
+        box-sizing: border-box;
+        //margin: 0;
       }
       p {
+        width: 52%;
+        height: auto;
+
+        margin-left: 7%;
+
         text-align: left;
+        outline: 1px solid red;
       }
+    }
+
+    .post--right {
+      h3 {
+        text-align: right;
+        padding-right: 7%;
+      }
+      p {
+        margin-left: auto;
+        margin-right: 7%;
+        text-align: left;
+        outline: 1px solid red;
+      }
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    &__item {
+      flex-wrap: wrap;
     }
   }
 }
@@ -122,13 +173,18 @@ h3 {
   width: 100%;
   &__content {
     display: inline;
-    width: 800px;
+    width: 61%;
     outline: 1px solid red;
+
+    p {
+      margin: 20px 20%;
+    }
   }
   .me {
     display: inline-block;
     float: left;
     margin-right: 3%;
+    margin-bottom: 20px;
     outline: 1px solid blue;
   }
   .skills {
@@ -136,32 +192,33 @@ h3 {
     float: right;
     margin-left: 3%;
     outline: 1px solid blue;
+    margin-top: 20px;
   }
 }
+
+.social-wrapper {
+  margin-bottom: 35px;
+}
+
 .main-nav {
   width: 485px;
   font-size: 15px;
-  outline: 1px solid green;
   &__menu {
     display: flex;
-    flex-wrap: wrap;
-//    width: 100%;
+    flex-wrap: wrap; //    width: 100%;
     //
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 50px;
-//    margin-right: 35px;
-  //  border: 4px solid yellow;
+    margin-top: 50px; //    margin-right: 35px;
+    //  border: 4px solid yellow;
     & li {
       display: block;
       position: relative;
-  //    width: 90px;
-      margin: 0;
-      margin-right: 8px;
+      //    width: 90px;
+      margin: 0 8px 0 0;
       padding: 0;
       text-align: center;
-
     }
     a {
       display: block;
@@ -182,6 +239,7 @@ h3 {
   &__sub-menu {
     display: none;
     position: absolute;
+    width: 160px;
     height: 180px;
     left: -40px;
     top: 20px;
@@ -190,19 +248,15 @@ h3 {
     font-weight: bold;
     z-index: 1;
     //background-color: red;
-
     & li:first-child a {
       padding-top: 10px;
     }
-
     & li:last-child a {
       padding-bottom: 10px;
     }
   }
-
-
   &__sub-menu::before {
-   content: "";
+    content: "";
     display: inline-block;
     margin: 0 0 -6px;
     padding: 0;
@@ -211,22 +265,20 @@ h3 {
     border-left-color: transparent;
     border-right-color: transparent;
   }
-   a:hover {
+  a:hover {
     color: @black;
   }
-  // li:hover > a {
-  //   color: @black;
-  // }
+  li:hover > a {
+    color: @black;
+  }
   li:hover &__sub-menu {
     display: block;
   }
-   &__sub-menu a {
+  &__sub-menu a {
     display: block;
     width: 160px;
     text-align: left;
-
     padding-left: 25px;
-
     // padding-bottom: 10px;
     // padding-top: 10px;
     font-size: 11px;
@@ -235,9 +287,36 @@ h3 {
     border: 4px solid @black;
     color: @white;
   }
-
   li:hover &__sub-menu a:hover {
     background-color: @white;
     color: @black;
   }
+}
+
+
+.button {
+//  display: inline-block;
+  height: 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 40px;
+  vertical-align: middle;
+  color: @blue-light;
+  font-weight: 700;
+  padding: 5px 5px;
+  border: 3px solid @blue-light;
+  margin-right: 5px;
+}
+
+.button:hover {
+  color: @white;
+  background-color: @black;
+  border-color: @black;
+}
+
+.button:active {
+  color: @white;
+  background-color: @blue-light;
+  border-color: @blue-light;
 }
