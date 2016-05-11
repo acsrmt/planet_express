@@ -58,7 +58,63 @@
       </div>
 
       <div class="page-header__bottom">
-        <div class="slider"></div>
+        <div class="slider">
+      <input type="radio" id="btn-1" name="toggle" checked>
+      <input type="radio" id="btn-2" name="toggle">
+      <input type="radio" id="btn-3" name="toggle">
+      <input type="radio" id="btn-4" name="toggle">
+      <input type="radio" id="btn-5" name="toggle">
+      <div class="slider-controls">
+        <label class="button" for="">PREV</label>
+        <label class="button" for="btn-1">1</label>
+        <label class="button" for="btn-2">2</label>
+        <label class="button" for="btn-3">3</label>
+        <label class="button" for="btn-4">4</label>
+        <label class="button" for="btn-5">5</label>
+        <label class="button" for="">NEXT</label>
+      </div>
+      <div class="slider-inner">
+        <div class="slider-slides">
+          <div class="img header-wrapper">
+            <h2>Slider</h2>
+            <p>
+              Sed laoreet magna at neque sollic-i-tudin, quis tristique ipsum per molestie. Class apt ent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum facilisis malesuada. Integer rhoncus laoreet velit
+            </p>
+          </div>
+
+          <div class="img header-wrapper">
+            <h2>Hellow 2</h2>
+            <p>
+              Sed laoreet magna at neque sollic-i-tudin, quis tristique ipsum per molestie. Class apt ent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum facilisis malesuada. Integer rhoncus laoreet velit
+            </p>
+          </div>
+
+          <div class="img header-wrapper">
+            <h2>Hellow 3</h2>
+            <p>
+              Sed laoreet magna at neque sollic-i-tudin, quis tristique ipsum per molestie. Class apt ent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum facilisis malesuada. Integer rhoncus laoreet velit
+            </p>
+          </div>
+
+          <div class="img header-wrapper">
+            <h2>Hellow 4</h2>
+            <p>
+              Sed laoreet magna at neque sollic-i-tudin, quis tristique ipsum per molestie. Class apt ent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum facilisis malesuada. Integer rhoncus laoreet velit
+            </p>
+          </div>
+
+          <div class="img header-wrapper">
+            <h2>Hellow 5</h2>
+            <p>
+              Sed laoreet magna at neque sollic-i-tudin, quis tristique ipsum per molestie. Class apt ent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum facilisis malesuada. Integer rhoncus laoreet velit
+            </p>
+          </div>
+          <!-- <img src="img/gallery_item_1.png">
+          <img src="img/gallery_item_2.png">
+          <img src="img/gallery_item_3.png"> -->
+        </div>
+      </div>
+    </div>
       </div>
     </header>
 
@@ -75,7 +131,10 @@
 
         <div class="content-wrapper">
           <div class="content-wrapper__item">
+            <div class="content-wrapper__item">
             <img src="img/welcome_ui_ux_design.png" alt="Ui/Ux Design"/>
+
+          </div>
             <div class="post">
               <h3>Ui/Ux Design</h3>
               <p>
@@ -94,7 +153,12 @@
                 Phasellus interdum aliquam eros, vitae vestibulum elit malesuada ut. Integer nec ex accumsan, suscipit eros a, tempus nisi. Suspendisse pretium elementum.
               </p>
             </div>
+            <div class="content-wrapper__item">
             <img src="img/welcome_develop.png" alt="Web Development"/>
+            <div class="details details--item">
+                  <a href="#" class="button">LEARN MORE</a>
+            </div>
+          </div>
           </div>
 
           <div class="content-wrapper__item">
@@ -127,7 +191,7 @@
         <div class="header-wrapper">
           <h2 class="">GALLERY</h2>
           <div class="button-wrapper">
-            <a class="button"href="#">ALL</a>
+            <a class="button" href="#">ALL</a>
             <a class="button" href="#">Graphic</a>
             <a class="button" href="#">Design</a>
             <a class="button" href="#">Logo</a>
@@ -152,15 +216,11 @@
           </div>
           <div class="content-wrapper__item">
             <img src="img/gallery_item_4.png" alt="img-4"/>
-            <!-- <div class="post">
-
-              <h3>New New York</h3>
-              <p>
-                Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim
-              </p>
+            <div class="details">
+                  <h3 class="header">New New York</h3>
+                  <p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim</p>
+                  <a href="#" class="button">View More</a>
             </div>
-            <a class="button" href="#"></a>
-            -->
           </div>
           <div class="content-wrapper__item">
             <img src="img/gallery_item_5.png" alt="img-5"/>
@@ -183,7 +243,9 @@
 
           <div class="about-me__content">
             <img class="me" src="img/about_me.png" alt="about_me"/>
-            <h2>Bender Bending Rodriguez</h2>
+            <h2>Bender Bending
+              <b>Rodriguez</b>
+            </h2>
             <div class="social-wrapper">
               <a class="button" href="#">Facebook</a>
               <a class="button" href="#">Google +</a>
@@ -193,8 +255,7 @@
               Cras et diam venenatis, vulputate sapien vitae, iaculis nulla. Donec et metus efficitur, vestibulum purus non, sodales urna. Fusce id rhoncus nisi. In sagittis feugiat convallis. Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus ac, blandit finibus mi.
             </p>
             <p>
-              Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl. Donec vel iaculis turpis, eu feugiat urna. Sed urna elit, sollicitudin non euismod sit amet, volutpat ac nulla. Quisque
-consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac pulvinar nulla velit eget elit. Vivamus maximus, leo nec vestibulum fringilla, lacus lectus mollis est, in imperdiet turpis lectus id mi. Morbi turpis eros, condimentum in magna vel, finibus varius velit. Donec pharetra magna in metus pretium, ac porttitor metus viverra. Etiam turpis nibh, euismod ac ligula at.
+              Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl. Donec vel iaculis turpis, eu feugiat urna. Sed urna elit, sollicitudin non euismod sit amet, volutpat ac nulla. Quisque consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac pulvinar nulla velit eget elit. Vivamus maximus, leo nec vestibulum fringilla, lacus lectus mollis est, in imperdiet turpis lectus id mi. Morbi turpis eros, condimentum in magna vel, finibus varius velit. Donec pharetra magna in metus pretium, ac porttitor metus viverra. Etiam turpis nibh, euismod ac ligula at.
             </p>
             <img class="skills" src="img/about_me_skills.png" alt=""/>
             <p>
@@ -203,7 +264,6 @@ consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac
             <p>
               Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus ac, blandit finibus mi. Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl.
             </p>
-
 
           </div>
 
@@ -221,21 +281,24 @@ consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac
           <div class="content-wrapper__item">
             <img src="img/blog_1.png" alt="Lorem ipsum dolor sit amet"/>
             <div class="post">
-              <h3>
+              <time>
                 20 January 2014 by Bender
-              </h3>
+              </time>
               <h3>Lorem ipsum dolor sit amet</h3>
               <p>
-                Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim. Males uada est, nec convallis euis mod. Nam eleifen elitinex placerat.
+                Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim.
+              </p>
+              <p>
+                Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim.
               </p>
             </div>
           </div>
 
           <div class="content-wrapper__item">
-            <div class="post">
-              <h3>
+            <div class="post post--right">
+              <time>
                 20 January 2014 by Bender
-              </h3>
+              </time>
               <h3>Etiam suscipit odio quis ipsum facilisis dapibus</h3>
               <p>
                 Proin quis cursus sapien. Suspendisse ultricies massa eu metus laoreet, eget molestie ex maximus. Nulla efficitur ipsum tortor, ac euismod felis placerat vel. Nulla facilisi. Pellentesque habitant morbi
@@ -247,11 +310,11 @@ consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac
           <div class="content-wrapper__item">
             <img src="img/blog_3.png" alt="Lorem ipsum dolor sit amet"/>
             <div class="post">
-              <h3>
+              <time>
                 20 January 2014 by Bender
-              </h3>
-              <h3>Vivamus semper a orci et posuere. Ut vulputate ante
-              </h3>
+              </time>
+              <h3>Vivamus semper a orci et posuere. Ut vulputate ante risus, placerat</h3>
+
               <p>
                 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer condimentum elementum ipsum a gravida. Sed est est, malesuada nec porttitor eu, aliquam non magn
               </p>
@@ -260,10 +323,11 @@ consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac
 
           <div class="content-wrapper__item">
 
-            <div class="post">
-              <h3>
+            <div class="post post--right">
+              <time>
                 20 January 2014 by Bender
-              </h3>
+              </time>
+
               <h3>Etiam suscipit odio quis ipsum facilisis dapibus</h3>
               <p>
                 Proin quis cursus sapien. Suspendisse ultricies massa eu metus laoreet, eget molestie ex maximus. Nulla efficitur ipsum tortor, ac euismod felis placerat vel. Nulla facilisi. Pellentesque habitant morbi
@@ -281,21 +345,24 @@ consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac
             </p>
           </div>
 
-          <div class="content-wrapper">
-            <div class="content-wrapper__item">
-              <img src="img/map.png" alt="map"/>
-            </div>
-            <div class="content-wrapper__item">
+          <div class="contacts-wrapper">
+              <img  src="img/map.png" alt="map"/>
+            <div class="contacts-wrapper__item">
               <div class="contacts__content">
-                <h4>Address</h4>
+                <h4>ADDRESS</h4>
                 <p>
-                  31-970 Kraków Polska Email: sample@mail.com
+                  ul. Lorem Street 123<br>
+                  31-970 Kraków <br>
+                  Polska
                 </p>
-                <p>
-                  ul. Lorem Street 123 Phone: +49 5241 80-0 00 Mobile: +49 5241 80-0 00 Facebook: facebook.com/username Twitter: twitter.com/username
-                </p>
-
-                </div>
+                <ul>
+                  <li>Email: <a href="mailto:sample@mail.com">sample@mail.com</a></li>
+                  <li>Phone: <a href="tel:+49 5241 80-0 00">+49 5241 80-0 00</a></li>
+                  <li>Mobile: <a href="tel:+49 5241 80-0 00">+49 5241 80-0 00</a></li>
+                  <li>Facebook: <a href="https://facebook.com/username" target="_blank">facebook.com/username</a></li>
+                  <li>Twitter: <a href="https://twitter.com/username" target="_blank">twitter.com/username</a></li>
+                </ul>
+              </div>
               <form class="feedback" action="index.html" method="post">
                 <div class="feedback-form-group">
                   <label for="name">NAME</label>
@@ -312,22 +379,31 @@ consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac
                   <textarea name="message" rows="8" cols="40" id="message"></textarea>
                 </div>
 
-                <input type="submit" value="SEND">
+                <input  class="button button-form" type="submit"  value="send">
               </form>
+
             </div>
           </section>
         </main>
 
         <footer class="page-footer">
-          <nav class="main-nav--foter">
-            <ul class="main-nav__menu">
-              <li>Home</li>
-              <li>Service</li>
-              <li>Works</li>
-              <li>About Me</li>
-              <li>Contact</li>
+          <div class="page-footer--wrapper">
+
+
+          <nav class="main-nav main-nav--footer">
+            <ul class="main-nav__menu main-nav__menu--footer">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">SERVICE</a></li>
+              <li><a href="#">WORKS</a></li>
+              <li><a href="#">ABOUT ME</a></li>
+              <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
+
+          <p>
+© 2015 PlanetExpress All right reserved
+          </p>
+          </div>
 
         </footer>
 
