@@ -500,7 +500,7 @@ li:hover .main-nav__sub-menu a:hover {
 .slider-slides .img {
   display: inline-block;
   float: left;
-  width: 780px;
+  width: 20%;
   height: 333px;
   box-sizing: border-box;
   padding: 10px 30px;
@@ -534,14 +534,14 @@ li:hover .main-nav__sub-menu a:hover {
   transform: translateX(0);
 }
 #btn-2:checked ~ .slider-inner .slider-slides {
-  transform: translateX(-780px);
+  transform: translateX(-20%);
 }
 #btn-3:checked ~ .slider-inner .slider-slides {
-  transform: translateX(-1560px);
+  transform: translateX(-40%);
 }
 #btn-4:checked ~ .slider-inner .slider-slides {
-  transform: translateX(-2340px);
+  transform: translateX(-60%);
 }
 #btn-5:checked ~ .slider-inner .slider-slides {
-  transform: translateX(-3120px);
+  transform: translateX(-80%);
 }
