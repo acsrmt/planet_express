@@ -15,13 +15,14 @@
 @font-size--h3: 1.1rem;
 @line-height: 1.4rem;
 @font-family: Open Sans, sans-serif;
-html {
-  font-size: @html-size-base;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
   max-width: 1300px;
   margin: auto;
@@ -40,8 +41,6 @@ h1 {
 }
 h2 {
   font-size: @font-size--h2;
-  //padding: 0;
-  //margin-top: 0;
 }
 h3 {
   font-size: @font-size--h3;
@@ -53,31 +52,20 @@ h3 {
   width: 100%;
   height: 750px;
   background: url("../img/slider.png") no-repeat @blue;
-  outline: 2px solid black;
   &__top {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
     height: 130px;
-    outline: 1px solid red;
   }
-
   &__bottom {
-
     display: flex;
     width: 100%;
     padding-left: 20%;
-    box-sizing: border-box;
-  //  flex-wrap: wrap;
-  //  justify-content: flex-start;
-    width: 100%;
-  //  height: 600px;
-    //height: 130px;
-    outline: 1px solid red;
   }
   &__logo {
-    margin-left: 40px;
+    margin-left: 3%;
     margin-right: auto;
     margin-top: 40px;
     color: white;
@@ -95,7 +83,6 @@ h3 {
 .page-main {
   display: flex;
   flex-wrap: wrap;
-
 }
 .header-wrapper {
   display: flex;
@@ -103,24 +90,18 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  outline: 1px solid green;
   padding-top: 170px;
   padding-bottom: 100px;
-
   .button-wrapper {
     width: 48%;
-    outline: 1px solid red;
     padding-top: 20px;
     padding-bottom: 30px;
   }
   h2 {
-    text-transform: uppercase;
-    //flex-grow: 1;
     width: 100%;
     padding-left: 26%;
-    outline: 1px solid blue;
+    text-transform: uppercase;
   }
-
   h2:after {
     content: "";
     display: block;
@@ -131,8 +112,6 @@ h3 {
   }
   p {
     width: 58%;
-    //padding: 19%;
-    outline: 1px solid purple;
     margin-bottom: 0;
   }
 }
@@ -140,152 +119,97 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
   &__item {
-    display: flex;
     position: relative;
-    flex-wrap: nowrap;
-    //padding: 0;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     .post {
-      // display: flex;
-      // flex-wrap: wrap;
-      // align-items: flex-start;
-      // flex-shrink: 4;
-      outline: 1px solid red;
       width: 50%;
-      min-height: 333px;
-      //padding: 0;
+      //min-height: 333px;
       padding-top: 70px;
-      //padding-right: auto;
       padding-left: 3%;
-      box-sizing: border-box;
       h3 {
         width: 52%;
         text-align: left;
         margin-top: 10px;
-
-        outline: 1px solid green;
-        box-sizing: border-box;
-
       }
       p {
         width: 52%;
-      //  padding: 0;
         text-align: left;
-        outline: 1px solid red;
-        box-sizing: border-box;
       }
-
       time {
         display: block;
         width: 52%;
         font-size: 13px;
-
-        //margin-bottom: 10px;
-
-        outline: 1px solid cyan;
-        //margin-bottom: 0;
       }
     }
-
-
     .details {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        top: 0;
-        left: 0;
-        color: #fff;
-        text-align: center;
-        padding-top: 75px;
-        box-sizing: border-box;
-        font-size: 15px;
-      .header {
-        outline: 1px solid red;
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      margin: 0 auto;
+      padding-top: 75px;
+      color: #fff;
+      text-align: center;
+      font-size: 15px;
+      .header {}
+      p {
+        width: 72%;
+        margin-left: auto;
+        margin-right: auto;
       }
-
-        p {
-          outline: 1px solid red;
-          width: 72%;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .button {
-          display: inline;
-          padding: 5px 10px;
-          text-decoration: none;
-          border: 2px solid @white;
-        }
-        .button:hover {
-          border: 2px solid @black;
-        }
+    }
+    &:hover .details {
+      display: block;
+      background-color: rgba(12, 154, 236, 0.8);
+    }
+    &:hover .details--item {
+      background-image: linear-gradient(to right, @blue-light, transparent);
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-bottom: 50px;
+      padding-right: 4%;
+      .button {
+        color: @white;
+        background-color: transparent;
+        border-color: white;
       }
-      &:hover .details {
-        display: block;
-        background-color: rgba(12, 154, 236, 0.8);
+      .button:hover {
+        color: @black;
+        background-color: transparent;
+        border-color: @black;
       }
-      &:hover .details--item{
-        background-image: linear-gradient(to right, @blue-light, transparent);
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding-bottom:50px;
-        padding-right: 50px;
-        .button {
-          color: @white;
-          background-color: transparent;
-
-        }
-      }
-        // &:hover .details {
-        //   display: block;
-        //   background-color: rgba(12, 154, 236, 0.8);
-        // }
+    }
     .post--right {
-      // padding-top: 70px;
-      //padding-left: auto;
-      //padding-left: auto;
-      //wdth: 50%;
       padding-left: 0;
       padding-right: 3%;
       padding-top: 70px;
-      box-sizing: border-box;
-      //text-align: right;
-
       h3 {
         width: 52%;
+        margin: 20px 0 0 auto;
         text-align: right;
-        margin-left: auto;
-        margin-right: 0;
-        margin-bottom: 0;
-        margin-top: 20px;
       }
       p {
         width: 52%;
         margin-left: auto;
-        text-align: left;
         margin-right: 0;
+        text-align: left;
       }
-
       time {
-        text-align: right;
         margin-left: auto;
-        //margin-right: 0;
+        text-align: right;
       }
     }
   }
-
   &__item:hover {
     color: @white;
     background-color: @blue;
-  }
-
-  @media screen and (max-width: 1300px) {
-    &__item {
-      flex-wrap: wrap;
-    }
   }
 }
 .about-me {
@@ -293,61 +217,46 @@ h3 {
   &__content {
     display: inline-block;
     width: 100%;
-    outline: 1px solid red;
-
     h2 {
-      //  float: left;
-      width: 35%;
       display: inline-block;
+      width: 35%;
+      margin-top: 0;
       font-size: 33px;
       font-weight: normal;
       line-height: 33px;
       text-transform: uppercase;
-      margin-top: 0;
     }
     p {
       margin: 20px 20%;
     }
   }
   .me {
-
     float: left;
     margin-right: 3%;
     margin-bottom: 20px;
-    outline: 1px solid blue;
   }
   .skills {
-
     float: right;
     margin-left: 3%;
-    outline: 1px solid blue;
     margin-top: 20px;
   }
 }
-
-
 .social-wrapper {
   margin-bottom: 35px;
 }
-
 .main-nav {
-  width: 485px;
+  width: 37%;
   font-size: 15px;
-  outline: 1px solid black;
-
   &__menu {
     display: flex;
-    flex-wrap: wrap; //    width: 100%;
-    //
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 50px; //    margin-right: 35px;
-    //  border: 4px solid yellow;
+    margin-top: 50px;
     & li {
-      display: block;
       position: relative;
-      //    width: 90px;
+      display: block;
       margin: 0 8px 0 0;
       padding: 0;
       text-align: center;
@@ -362,13 +271,8 @@ h3 {
       text-decoration: none;
       white-space: nowrap;
       font-weight: bolder;
-      box-sizing: border-box;
     }
-    // a:hover {
-    //   background-color: rgba(0, 144, 240, 1);
-    // }
   }
-
   &__sub-menu {
     display: none;
     position: absolute;
@@ -380,7 +284,6 @@ h3 {
     padding: 0;
     font-weight: bold;
     z-index: 1;
-    //background-color: red;
     & li:first-child a {
       padding-top: 10px;
     }
@@ -410,219 +313,161 @@ h3 {
   &__sub-menu a {
     display: block;
     width: 160px;
-    text-align: left;
     padding-left: 25px;
-    // padding-bottom: 10px;
-    // padding-top: 10px;
+    border: 4px solid @black;
+    text-align: left;
     font-size: 11px;
     line-height: 18px;
-    background-color: @black;
-    border: 4px solid @black;
     color: @white;
+    background-color: @black;
   }
   li:hover &__sub-menu a:hover {
+    color: @black;
     background-color: @white;
-    color: @black;
   }
 }
-//доработать футер и псевдоэлемент
+
 .main-nav--footer {
-    width: 400px;
-display: flex;
-    font-size: 13px;
-  //  margin: 100px;
-    //  height: 100px;
-.main-nav__menu--footer {    //
-//  width: 100%;
   display: flex;
-
-  outline: 1px solid green;
-  //  border: 4px solid yellow;
-  & li {
+  width: 88%;
+  font-size: 13px;
+  .main-nav__menu--footer {
+    display: flex;
+    & li {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    a {
+      font-size: 13px;
+      color: @black;
+      font-weight: 700;
+    }
+  }
+  .main-nav__menu--footer::after {
+    content: "";
     display: block;
-    position: relative;
-    //    width: 90px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    width: 45px;
+    height: 6px;
+    margin-left: auto;
+    margin-right: 40px;
+    background-color: @black;
   }
-  a {
-    font-size: 13px;
-
-    color: @black;
-    font-weight: 700;
-  }
-  // a:hover {
-  //   background-color: rgba(0, 144, 240, 1);
-  // }
-}
-
-.main-nav__menu--footer::after {
-  content: "";
-  display: block;
-  width: 45px;
-  height: 6px;
-  margin-left: auto;
-  margin-right: 40px;
-
-//  margin-top: 35px;
-  background-color: @black;
-}
 }
 .button {
   display: inline;
   height: 30px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  padding: 5px;
+  border: 3px solid @blue-light;
   font-size: 15px;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 40px;
   vertical-align: middle;
   color: @blue-light;
-  background-color: @white;
   font-weight: 700;
-  padding: 5px 5px;
-  border: 3px solid @blue-light;
-  margin-right: 5px;
+  background-color: @white;
 }
-
 .button-form {
-  //vertical-align: top;
-  //display: inline-block;
-  line-height: 0px;
-  //padding-top: 0;
+  display: inline;
+  line-height: 0;
 }
-
-
-
 .button:hover {
+  border-color: @black;
   color: @white;
   background-color: @black;
-  border-color: @black;
 }
-
 .button:active {
+  border-color: @blue-light;
   color: @white;
   background-color: @blue-light;
-  border-color: @blue-light;
 }
-
 .contacts {
+  width: 100%;
   &-wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: flex-start;
+    width: 100%;
     align-items: flex-start;
-
-    // img {
-    //   float:right;
-    // }
-
-h4 {
-  font-size: 17px;
-  line-height: 17px;
-  //padding: 0;
-  margin: 0;
-}
-
+    h4 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 17px;
+    }
     &__item {
       width: 50%;
-      padding: 0;
-      padding-left: 40px;
-      box-sizing: border-box;
       margin: 0;
+      padding: 0 0 0 3%;
     }
-
-
   }
   &__content {
-    //background-color: rgb(110, 86, 228);
-    width:  100%;
+    width: 100%;
     margin: 0;
-    padding: 0;
-    //margin-top: -20px;
     margin-bottom: 50px;
-    box-sizing: border-box;
+    padding: 0;
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      outline: 1px solid green;
     }
-
     li a {
       text-decoration: none;
       color: @black;
       font-weight: 700;
     }
-
     li a:hover {
       color: @blue-light;
     }
   }
 }
-
-
-.feedback  {
-  //width: 50%;
-///  background-color: rgb(134, 252, 149);
+.feedback {
   &-form-group {
-  //  width: 100%;
     display: flex;
     flex-wrap: wrap;
     label {
       width: 100%;
-      outline: 1px solid red;
       font-weight: 700;
     }
-
-    input[type="text"],input[type="email"], textarea {
+    input[type="email"],
+    input[type="text"],
+    textarea {
       width: 57%;
       height: 50px;
-      outline: 1px solid green;
+      margin-bottom: 20px;
       border: 3px solid @grey;
       font-size: 15px;
-      margin-bottom: 20px;
     }
     textarea {
       height: 180px;
     }
-
-    // input:hover, textarea:hover {
-    //   border: 3px solid @blue-light;
-    // }
-    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    input[type="email"]:focus,
+    input[type="text"]:focus,
+    textarea:focus {
       border: 3px solid @black;
     }
   }
 }
-
-
 .page-footer {
-//  background: rgb(134, 54, 150);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
   height: 400px;
-
   &__wrapper {
     width: 30%;
   }
-
   p {
-  //  width: 100%;
-  //  margin-top: 0px;
-
-    outline: 1px solid red;
     height: 20px;
   }
 }
-
-
 .slider {
-  width: 780px;
+  width: 60%;
   position: relative;
 }
 .slider input[type=radio] {
@@ -640,9 +485,7 @@ h4 {
   float: left;
   width: 20%;
   height: 333px;
-  box-sizing: border-box;
   padding: 10px 30px;
-
   h2 {
     padding-left: 8%;
   }
@@ -652,35 +495,24 @@ h4 {
 }
 .slider-controls {
   position: absolute;
-  //width: 50%;
   left: 0;
   bottom: 40px;
-  z-index: 100;
-  text-align: center;
   margin: 0 9%;
+  z-index: 100;
 }
 .slider-controls label {
-  display: inline-block;
-//  width: 30px;
+  display: inline;
+  width: 30px;
   height: 30px;
-  //margin: 0 3px;
-  background: transparent;
-  color: @white;
-  padding: 0 10px;
-  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 5px 10px;
   border: 4px solid white;
+  color: @white;
   font-size: 16px;
-  line-height: 30px;
-
-//  transition: background-color 0.2s;
+  line-height: 40px;
+  cursor: pointer;
+  background: transparent;
 }
-// #btn-1:checked ~ .slider-controls label[for="btn-1"],
-// #btn-2:checked ~ .slider-controls label[for="btn-2"],
-// #btn-3:checked ~ .slider-controls label[for="btn-3"],
-// #btn-4:checked ~ .slider-controls label[for="btn-4"],
-// #btn-5:checked ~ .slider-controls label[for="btn-5"] {
-//   background-color: #666;
-// }
 #btn-1:checked ~ .slider-inner .slider-slides {
   transform: translateX(0);
 }
